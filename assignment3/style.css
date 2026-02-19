@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+
+
+.section1{
+    height:90vh;
+    background:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.section1::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.4);
+}
+
+.section2{
+    position:relative;
+    z-index:2;
+}
+
+.section2 h1{
+    font-size:45px;
+    font-weight:bold;
+    line-height:1.3;
+}
+
+.section2 button{
+    margin-top:20px;
+    padding:12px 30px;
+    background:#ff8c00;
+    border:none;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
+
+/* ================= OUTDOOR ================= */
+.section3{
+    display:flex;
+    padding:100px 10%;
+    gap:80px;
+    align-items:center;
+    background:white;
+}
+
+/* Left Text */
+.section4{
+    flex:1;
+}
+
+.section4 h2{
+    font-size:34px;
+    color:#0d2c54;
+    margin-bottom:20px;
+}
+
+.section4 p{
+    color:#6b6b6b;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* Right Side */
+.section5{
+    flex:1;
+    position:relative;
+}
+
+/* Grey Background Structure */
+.image-box{
+    background:#f2f2f2;
+    padding:40px;
+}
+
+.image-box img{
+    width:100%;
+    display:block;
+}
+
+/* Arrows */
+.arrow-box{
+    display:flex;
+    gap:15px;
+    margin-top:15px;
+}
+
+.arrow{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    border:1px solid #0d2c54;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0d2c54;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.arrow:hover{
+    background:#0d2c54;
+    color:white;
+}
+
+
+/* ================= TOURISM ================= */
+
+.section6{
+    padding:80px 10%;
+}
+
+.section6 h2{
+    font-size:32px;
+    color:#0d2c54;
+    margin-bottom:40px;
+}
+
+.section7{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.section8{
+    text-align:center;
+    padding:40px;
+}
+
+.section8 img{
+    width:80px;
+    margin-bottom:15px;
+}
+
+.section8 p{
+    color:#ff8c00;
+    font-weight:500;
+}
+
+/* bottom 2 centered */
+.section9{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:30px;
+}
+
+/* ================= TABS ================= */
+
+.section10{
+    padding:80px 10%;
+    background:white;
+}
+
+.section10 h2{
+    text-align:center;
+    font-size:30px;
+    color:#0d2c54;
+    margin-bottom:30px;
+}
+
+.section11{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    border-bottom:2px solid #ddd;
+    padding-bottom:10px;
+}
+
+.section11 span{
+    color:#0d2c54;
+    font-size:14px;
+}
+
+.section11 .active{
+    border-bottom:3px solid #ff8c00;
+    padding-bottom:5px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+    .section3{
+        flex-direction:column;
+    }
+
+    .section7{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .section7{
+        grid-template-columns:1fr;
+    }
+
+    .section9{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .section2 h1{
+        font-size:26px;
+    }
+}
